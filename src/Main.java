@@ -12,7 +12,7 @@ public class Main
             System.out.println("Menu " +
                     "\n 1.- Ingresar temperatura" +
                     "\n 2.- Ver registro de temperaturas" +
-                    "\n 3.- Eliminar un registro" +
+                    "\n 3.- Ordenar datos" +
                     "\n 4.- Modificar un registro" +
                     "\n 5.- Salir");
             opc = lector.nextInt();
@@ -23,8 +23,19 @@ public class Main
                     elDato = lector.nextDouble();
                     temperaturas.ingresarDato(elDato);
                     break;
+                case 2:
+                    temperaturas.mostrarDatos();
+                    break;
+                case 3:
+                    temperaturas.ordenarDatos();
+                    System.out.println("Datos ordenados...");
+                    break;
+                default:
+                    System.out.println("Bye");
+                    break;
             }
         }while(opc!=5);
+        temperaturas.ordenarDatos();
 
 
 /*

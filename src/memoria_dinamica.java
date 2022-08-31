@@ -1,4 +1,6 @@
 import java.util.ArrayList;
+import java.util.Collections;
+
 public class memoria_dinamica
 {
     ArrayList<Double> temperaturas = new ArrayList<>();
@@ -32,5 +34,10 @@ public class memoria_dinamica
         }
         promedio = suma/temperaturas.size();
         System.out.println("El promedio de las temperaturas es: " + promedio + " °C");
+    }
+
+    public void ordenarDatos()
+    {
+        Collections.sort(temperaturas);
     }
 }
